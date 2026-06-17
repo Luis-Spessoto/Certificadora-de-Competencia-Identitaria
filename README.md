@@ -27,6 +27,11 @@
   
 # Tecnologias
 
+- Linguagens: TypeScript, HTML, CSS 
+- Frameworks: React
+- Ferramentas de Desenvolvimento: VS Code 
+- Banco de Dados: MongoDB 
+- Infraestrutura/Outros: GitHub (Repositório) e Figma (Prototipagem).
 
 # Divisão Laboral 
 
