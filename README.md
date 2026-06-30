@@ -1,3 +1,7 @@
+# Certificadora de Competência Identitária - ELLP [Gestão de Oficinas]
+
+Este repositório unifica o front-end e o back-end da plataforma de gestão de oficinas do projeto de extensão ELLP (Ensino Lúdico de Programação) da UTFPR-CP.
+
 # <h1 align="center"> Certificadora de Competencia Identitária - ELLP [Gestão de Oficinas] </h1>
 
 <div align="center">
@@ -32,6 +36,14 @@ A aplicação substitui controles manuais, possibilitando o gerenciamento organi
 
 O sistema permite que os responsáveis pelo projeto realizem o acompanhamento das atividades, organização das turmas e controle das informações relacionadas às oficinas.
 
+
+# Tecnologias utilizadas
+
+* Front-end: React com typescript
+* Backend: Node.js com express, utilizando MongoDB como Banco de Dados.
+
+
+# Divisão do grupo para o desenvolvimento
 
 # Tecnologias utilizadas
 
@@ -88,11 +100,36 @@ O sistema permite que os responsáveis pelo projeto realizem o acompanhamento da
 - Criação e gerenciamento de turmas
 - Associação de alunos e tutores
 
+__________________________________________
 
-# Requisitos para execução
+# Estrutura do Repositório
 
-Antes de iniciar o projeto, é necessário possuir instalado:
+O projeto é dividido em dois diretórios principais:
+* `/frontend`: Interface web construída com React, TypeScript
+* `/backend`: API RESTful desenvolvida com Node.js, Express, Mongoose e MongoDB.
 
-## Node.js
+# Como Executar o Projeto
 
-Versão recomendada:
+Certifique-se de ter o Node.js instalado na sua máquina e o MongoDB rodando localmente (ou uma URI de banco configurada no arquivo `.env` do backend).
+
+Instale as dependências executando `npm install` dentro das respectivas pastas.
+
+A partir do diretório raiz do projeto, utilize os seguintes comandos para iniciar os servidores:
+
+### 1. Iniciar o Servidor Back-end:
+```bash
+npm run dev:backend
+```
+
+### 2. Iniciar o Servidor Front-end:
+```bash
+npm run dev:frontend
+```
+
+*(Lembre-se de rodar estes comandos em terminais separados para manter ambos em execução ao mesmo tempo).*
+
+# Documentação da API (Swagger)
+
+A API possui documentação interativa com o Swagger. Para acessá-la:
+1. Inicie o back-end (`npm run dev:backend`).
+2. Acesse a URL: `http://localhost:3000/api-docs` no seu navegador.

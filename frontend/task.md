@@ -1,0 +1,12 @@
+- [x] Criar pastas `frontend` e `backend` no repositório raiz
+- [x] Mover arquivos do front-end atual para a subpasta `frontend`
+- [x] Copiar arquivos do back-end externo para a subpasta `backend`
+- [x] Instalar dependências `jsonwebtoken` e `bcryptjs` no back-end
+- [x] Atualizar schema `Tutor.js` no back-end com senha, papel e status (sem comentários)
+- [x] Criar `authMiddleware.js` no back-end (sem comentários)
+- [x] Criar `authController.js` no back-end (sem comentários)
+- [x] Criar `authRoutes.js` e registrá-la no back-end (sem comentários)
+- [x] Atualizar `apiClient.ts` no front-end para remover o mock adapter e usar requisições reais (sem comentários)
+- [x] Apagar arquivo `mockAdapter.ts` no front-end
+- [x] Ajustar rotas e serviços no front-end para usar o novo back-end de autenticação (sem comentários)
+- [x] Validar compilação e rodar build do front-end e inicialização do back-end

@@ -1,0 +1,546 @@
+{
+  "%23tanstack-start-plugin-adapters": {
+    "file": "assets/__23tanstack-start-plugin-adapters-Cwee5PKy.js",
+    "name": "__23tanstack-start-plugin-adapters",
+    "src": "%23tanstack-start-plugin-adapters",
+    "isDynamicEntry": true
+  },
+  "C:/Users/citas/OneDrive/Área de Trabalho/Bruno Biazon/Certificadora/Certificadora-de-Competencia-Identitaria/frontend/src/styles.css": {
+    "file": "assets/styles-BpUBHJ-2.css",
+    "src": "C:/Users/citas/OneDrive/Área de Trabalho/Bruno Biazon/Certificadora/Certificadora-de-Competencia-Identitaria/frontend/src/styles.css"
+  },
+  "_AlunoForm-CEEocOUD.js": {
+    "file": "assets/AlunoForm-CEEocOUD.js",
+    "name": "AlunoForm",
+    "imports": [
+      "_server-BXgX27qI.js",
+      "_types--ofDvtVS.js",
+      "_button-D6pPiZoM.js",
+      "_input-BAbo1PnM.js",
+      "_label-CGQJOB1N.js",
+      "_select-B0KGSWrx.js"
+    ]
+  },
+  "_TurmaForm-BT5yWf5u.js": {
+    "file": "assets/TurmaForm-BT5yWf5u.js",
+    "name": "TurmaForm",
+    "imports": [
+      "_server-BXgX27qI.js",
+      "_types--ofDvtVS.js",
+      "_button-D6pPiZoM.js",
+      "_input-BAbo1PnM.js",
+      "_label-CGQJOB1N.js"
+    ]
+  },
+  "_TutorForm-B6Ip1RNp.js": {
+    "file": "assets/TutorForm-B6Ip1RNp.js",
+    "name": "TutorForm",
+    "imports": [
+      "_server-BXgX27qI.js",
+      "_types--ofDvtVS.js",
+      "_button-D6pPiZoM.js",
+      "_input-BAbo1PnM.js",
+      "_label-CGQJOB1N.js",
+      "_select-B0KGSWrx.js"
+    ]
+  },
+  "_TutorOficinasCard-BdwUEVVm.js": {
+    "file": "assets/TutorOficinasCard-BdwUEVVm.js",
+    "name": "TutorOficinasCard",
+    "imports": [
+      "_server-BXgX27qI.js",
+      "_useQuery-BBHTbV8Q.js",
+      "_tutoresService-Da6jc7JF.js",
+      "_card-Ds5oDOXi.js"
+    ]
+  },
+  "_alunosService-DJz8e1qL.js": {
+    "file": "assets/alunosService-DJz8e1qL.js",
+    "name": "alunosService",
+    "imports": [
+      "_router-X-RD508Q.js"
+    ]
+  },
+  "_badge-BJQ6jfYi.js": {
+    "file": "assets/badge-BJQ6jfYi.js",
+    "name": "badge",
+    "imports": [
+      "_server-BXgX27qI.js",
+      "_button-D6pPiZoM.js",
+      "_utils-Bz4m9VPB.js"
+    ]
+  },
+  "_button-D6pPiZoM.js": {
+    "file": "assets/button-D6pPiZoM.js",
+    "name": "button",
+    "imports": [
+      "_server-BXgX27qI.js",
+      "_utils-Bz4m9VPB.js"
+    ]
+  },
+  "_card-Ds5oDOXi.js": {
+    "file": "assets/card-Ds5oDOXi.js",
+    "name": "card",
+    "imports": [
+      "_server-BXgX27qI.js",
+      "_utils-Bz4m9VPB.js"
+    ]
+  },
+  "_createLucideIcon-QBZlNJG1.js": {
+    "file": "assets/createLucideIcon-QBZlNJG1.js",
+    "name": "createLucideIcon",
+    "imports": [
+      "_server-BXgX27qI.js"
+    ]
+  },
+  "_input-BAbo1PnM.js": {
+    "file": "assets/input-BAbo1PnM.js",
+    "name": "input",
+    "imports": [
+      "_server-BXgX27qI.js",
+      "_utils-Bz4m9VPB.js"
+    ]
+  },
+  "_label-CGQJOB1N.js": {
+    "file": "assets/label-CGQJOB1N.js",
+    "name": "label",
+    "imports": [
+      "_server-BXgX27qI.js",
+      "_router-X-RD508Q.js",
+      "_button-D6pPiZoM.js",
+      "_utils-Bz4m9VPB.js"
+    ]
+  },
+  "_router-X-RD508Q.js": {
+    "file": "assets/router-X-RD508Q.js",
+    "name": "router",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-BXgX27qI.js"
+    ],
+    "dynamicImports": [
+      "src/routes/login.tsx?tsr-split=component",
+      "src/routes/cadastro.tsx?tsr-split=component",
+      "src/routes/_authenticated.tsx?tsr-split=component",
+      "src/routes/index.tsx?tsr-split=component",
+      "src/routes/_authenticated/meu-perfil.tsx?tsr-split=component",
+      "src/routes/_authenticated/dashboard.tsx?tsr-split=component",
+      "src/routes/_authenticated/aprovacoes.tsx?tsr-split=component",
+      "src/routes/_authenticated/tutores.index.tsx?tsr-split=component",
+      "src/routes/_authenticated/turmas.index.tsx?tsr-split=component",
+      "src/routes/_authenticated/alunos.index.tsx?tsr-split=component",
+      "src/routes/_authenticated/tutores.novo.tsx?tsr-split=component",
+      "src/routes/_authenticated/tutores.$id.tsx?tsr-split=component",
+      "src/routes/_authenticated/turmas.nova.tsx?tsr-split=component",
+      "src/routes/_authenticated/turmas.$id.tsx?tsr-split=component",
+      "src/routes/_authenticated/alunos.novo.tsx?tsr-split=component",
+      "src/routes/_authenticated/alunos.$id.tsx?tsr-split=component"
+    ],
+    "assets": [
+      "assets/styles-BpUBHJ-2.css"
+    ]
+  },
+  "_school-CPPSxZxD.js": {
+    "file": "assets/school-CPPSxZxD.js",
+    "name": "school",
+    "imports": [
+      "_createLucideIcon-QBZlNJG1.js"
+    ]
+  },
+  "_select-B0KGSWrx.js": {
+    "file": "assets/select-B0KGSWrx.js",
+    "name": "select",
+    "imports": [
+      "_server-BXgX27qI.js",
+      "_router-X-RD508Q.js",
+      "_button-D6pPiZoM.js",
+      "_utils-Bz4m9VPB.js",
+      "_createLucideIcon-QBZlNJG1.js"
+    ]
+  },
+  "_server-BXgX27qI.js": {
+    "file": "assets/server-BXgX27qI.js",
+    "name": "server",
+    "isDynamicEntry": true,
+    "dynamicImports": [
+      "tanstack-start-manifest:v",
+      "_router-X-RD508Q.js",
+      "src/start.ts",
+      "%23tanstack-start-plugin-adapters"
+    ]
+  },
+  "_table-Dywj9nL9.js": {
+    "file": "assets/table-Dywj9nL9.js",
+    "name": "table",
+    "imports": [
+      "_server-BXgX27qI.js",
+      "_utils-Bz4m9VPB.js"
+    ]
+  },
+  "_tutoresService-Da6jc7JF.js": {
+    "file": "assets/tutoresService-Da6jc7JF.js",
+    "name": "tutoresService",
+    "imports": [
+      "_router-X-RD508Q.js"
+    ]
+  },
+  "_types--ofDvtVS.js": {
+    "file": "assets/types--ofDvtVS.js",
+    "name": "types",
+    "imports": [
+      "_server-BXgX27qI.js"
+    ]
+  },
+  "_useMutation-DqCqpFFD.js": {
+    "file": "assets/useMutation-DqCqpFFD.js",
+    "name": "useMutation",
+    "imports": [
+      "_server-BXgX27qI.js",
+      "_router-X-RD508Q.js"
+    ]
+  },
+  "_useQuery-BBHTbV8Q.js": {
+    "file": "assets/useQuery-BBHTbV8Q.js",
+    "name": "useQuery",
+    "imports": [
+      "_router-X-RD508Q.js",
+      "_server-BXgX27qI.js"
+    ]
+  },
+  "_users-B_h33y_A.js": {
+    "file": "assets/users-B_h33y_A.js",
+    "name": "users",
+    "imports": [
+      "_createLucideIcon-QBZlNJG1.js"
+    ]
+  },
+  "_utils-Bz4m9VPB.js": {
+    "file": "assets/utils-Bz4m9VPB.js",
+    "name": "utils"
+  },
+  "_worker-entry-DPV_7oln.js": {
+    "file": "assets/worker-entry-DPV_7oln.js",
+    "name": "worker-entry",
+    "dynamicImports": [
+      "_server-BXgX27qI.js"
+    ]
+  },
+  "src/routes/_authenticated.tsx?tsr-split=component": {
+    "file": "assets/_authenticated-BPGM-WoE.js",
+    "name": "_authenticated",
+    "src": "src/routes/_authenticated.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-BXgX27qI.js",
+      "_router-X-RD508Q.js",
+      "_button-D6pPiZoM.js",
+      "_utils-Bz4m9VPB.js",
+      "_createLucideIcon-QBZlNJG1.js",
+      "_users-B_h33y_A.js",
+      "_school-CPPSxZxD.js"
+    ]
+  },
+  "src/routes/_authenticated/alunos.$id.tsx?tsr-split=component": {
+    "file": "assets/alunos._id-CWjdh-QD.js",
+    "name": "alunos._id",
+    "src": "src/routes/_authenticated/alunos.$id.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-BXgX27qI.js",
+      "_router-X-RD508Q.js",
+      "_useQuery-BBHTbV8Q.js",
+      "_useMutation-DqCqpFFD.js",
+      "_alunosService-DJz8e1qL.js",
+      "_AlunoForm-CEEocOUD.js",
+      "_button-D6pPiZoM.js",
+      "_badge-BJQ6jfYi.js",
+      "_types--ofDvtVS.js",
+      "_input-BAbo1PnM.js",
+      "_utils-Bz4m9VPB.js",
+      "_label-CGQJOB1N.js",
+      "_select-B0KGSWrx.js",
+      "_createLucideIcon-QBZlNJG1.js"
+    ]
+  },
+  "src/routes/_authenticated/alunos.index.tsx?tsr-split=component": {
+    "file": "assets/alunos.index-C7I7x_yz.js",
+    "name": "alunos.index",
+    "src": "src/routes/_authenticated/alunos.index.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-BXgX27qI.js",
+      "_router-X-RD508Q.js",
+      "_useQuery-BBHTbV8Q.js",
+      "_useMutation-DqCqpFFD.js",
+      "_alunosService-DJz8e1qL.js",
+      "_badge-BJQ6jfYi.js",
+      "_button-D6pPiZoM.js",
+      "_table-Dywj9nL9.js",
+      "_input-BAbo1PnM.js",
+      "_utils-Bz4m9VPB.js"
+    ]
+  },
+  "src/routes/_authenticated/alunos.novo.tsx?tsr-split=component": {
+    "file": "assets/alunos.novo-DXU9XHsN.js",
+    "name": "alunos.novo",
+    "src": "src/routes/_authenticated/alunos.novo.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-BXgX27qI.js",
+      "_router-X-RD508Q.js",
+      "_useMutation-DqCqpFFD.js",
+      "_alunosService-DJz8e1qL.js",
+      "_AlunoForm-CEEocOUD.js",
+      "_types--ofDvtVS.js",
+      "_button-D6pPiZoM.js",
+      "_utils-Bz4m9VPB.js",
+      "_input-BAbo1PnM.js",
+      "_label-CGQJOB1N.js",
+      "_select-B0KGSWrx.js",
+      "_createLucideIcon-QBZlNJG1.js"
+    ]
+  },
+  "src/routes/_authenticated/aprovacoes.tsx?tsr-split=component": {
+    "file": "assets/aprovacoes-BCC0_oQp.js",
+    "name": "aprovacoes",
+    "src": "src/routes/_authenticated/aprovacoes.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-BXgX27qI.js",
+      "_router-X-RD508Q.js",
+      "_useQuery-BBHTbV8Q.js",
+      "_useMutation-DqCqpFFD.js",
+      "_tutoresService-Da6jc7JF.js",
+      "_button-D6pPiZoM.js",
+      "_badge-BJQ6jfYi.js",
+      "_utils-Bz4m9VPB.js"
+    ]
+  },
+  "src/routes/_authenticated/dashboard.tsx?tsr-split=component": {
+    "file": "assets/dashboard-0sTHD-SM.js",
+    "name": "dashboard",
+    "src": "src/routes/_authenticated/dashboard.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-BXgX27qI.js",
+      "_useQuery-BBHTbV8Q.js",
+      "_tutoresService-Da6jc7JF.js",
+      "_alunosService-DJz8e1qL.js",
+      "_router-X-RD508Q.js",
+      "_card-Ds5oDOXi.js",
+      "_users-B_h33y_A.js",
+      "_school-CPPSxZxD.js",
+      "_utils-Bz4m9VPB.js",
+      "_createLucideIcon-QBZlNJG1.js"
+    ]
+  },
+  "src/routes/_authenticated/meu-perfil.tsx?tsr-split=component": {
+    "file": "assets/meu-perfil-B_tiM070.js",
+    "name": "meu-perfil",
+    "src": "src/routes/_authenticated/meu-perfil.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-BXgX27qI.js",
+      "_useQuery-BBHTbV8Q.js",
+      "_router-X-RD508Q.js",
+      "_useMutation-DqCqpFFD.js",
+      "_tutoresService-Da6jc7JF.js",
+      "_TutorForm-B6Ip1RNp.js",
+      "_TutorOficinasCard-BdwUEVVm.js",
+      "_types--ofDvtVS.js",
+      "_button-D6pPiZoM.js",
+      "_utils-Bz4m9VPB.js",
+      "_input-BAbo1PnM.js",
+      "_label-CGQJOB1N.js",
+      "_select-B0KGSWrx.js",
+      "_createLucideIcon-QBZlNJG1.js",
+      "_card-Ds5oDOXi.js"
+    ]
+  },
+  "src/routes/_authenticated/turmas.$id.tsx?tsr-split=component": {
+    "file": "assets/turmas._id-Do4Nk-je.js",
+    "name": "turmas._id",
+    "src": "src/routes/_authenticated/turmas.$id.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-BXgX27qI.js",
+      "_router-X-RD508Q.js",
+      "_useQuery-BBHTbV8Q.js",
+      "_useMutation-DqCqpFFD.js",
+      "_alunosService-DJz8e1qL.js",
+      "_TurmaForm-BT5yWf5u.js",
+      "_card-Ds5oDOXi.js",
+      "_button-D6pPiZoM.js",
+      "_badge-BJQ6jfYi.js",
+      "_select-B0KGSWrx.js",
+      "_types--ofDvtVS.js",
+      "_input-BAbo1PnM.js",
+      "_utils-Bz4m9VPB.js",
+      "_label-CGQJOB1N.js",
+      "_createLucideIcon-QBZlNJG1.js"
+    ]
+  },
+  "src/routes/_authenticated/turmas.index.tsx?tsr-split=component": {
+    "file": "assets/turmas.index-BV3z4khd.js",
+    "name": "turmas.index",
+    "src": "src/routes/_authenticated/turmas.index.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-BXgX27qI.js",
+      "_router-X-RD508Q.js",
+      "_useQuery-BBHTbV8Q.js",
+      "_useMutation-DqCqpFFD.js",
+      "_alunosService-DJz8e1qL.js",
+      "_input-BAbo1PnM.js",
+      "_button-D6pPiZoM.js",
+      "_badge-BJQ6jfYi.js",
+      "_table-Dywj9nL9.js",
+      "_utils-Bz4m9VPB.js"
+    ]
+  },
+  "src/routes/_authenticated/turmas.nova.tsx?tsr-split=component": {
+    "file": "assets/turmas.nova-Cpt0jLn_.js",
+    "name": "turmas.nova",
+    "src": "src/routes/_authenticated/turmas.nova.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-BXgX27qI.js",
+      "_router-X-RD508Q.js",
+      "_useMutation-DqCqpFFD.js",
+      "_alunosService-DJz8e1qL.js",
+      "_TurmaForm-BT5yWf5u.js",
+      "_types--ofDvtVS.js",
+      "_button-D6pPiZoM.js",
+      "_utils-Bz4m9VPB.js",
+      "_input-BAbo1PnM.js",
+      "_label-CGQJOB1N.js"
+    ]
+  },
+  "src/routes/_authenticated/tutores.$id.tsx?tsr-split=component": {
+    "file": "assets/tutores._id-BNAwyUp4.js",
+    "name": "tutores._id",
+    "src": "src/routes/_authenticated/tutores.$id.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-BXgX27qI.js",
+      "_router-X-RD508Q.js",
+      "_useQuery-BBHTbV8Q.js",
+      "_useMutation-DqCqpFFD.js",
+      "_tutoresService-Da6jc7JF.js",
+      "_TutorForm-B6Ip1RNp.js",
+      "_TutorOficinasCard-BdwUEVVm.js",
+      "_button-D6pPiZoM.js",
+      "_types--ofDvtVS.js",
+      "_input-BAbo1PnM.js",
+      "_utils-Bz4m9VPB.js",
+      "_label-CGQJOB1N.js",
+      "_select-B0KGSWrx.js",
+      "_createLucideIcon-QBZlNJG1.js",
+      "_card-Ds5oDOXi.js"
+    ]
+  },
+  "src/routes/_authenticated/tutores.index.tsx?tsr-split=component": {
+    "file": "assets/tutores.index-CYx_6u6J.js",
+    "name": "tutores.index",
+    "src": "src/routes/_authenticated/tutores.index.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-BXgX27qI.js",
+      "_router-X-RD508Q.js",
+      "_useQuery-BBHTbV8Q.js",
+      "_useMutation-DqCqpFFD.js",
+      "_tutoresService-Da6jc7JF.js",
+      "_badge-BJQ6jfYi.js",
+      "_button-D6pPiZoM.js",
+      "_table-Dywj9nL9.js",
+      "_input-BAbo1PnM.js",
+      "_utils-Bz4m9VPB.js"
+    ]
+  },
+  "src/routes/_authenticated/tutores.novo.tsx?tsr-split=component": {
+    "file": "assets/tutores.novo-ClBuwFb6.js",
+    "name": "tutores.novo",
+    "src": "src/routes/_authenticated/tutores.novo.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-BXgX27qI.js",
+      "_router-X-RD508Q.js",
+      "_useMutation-DqCqpFFD.js",
+      "_tutoresService-Da6jc7JF.js",
+      "_TutorForm-B6Ip1RNp.js",
+      "_types--ofDvtVS.js",
+      "_button-D6pPiZoM.js",
+      "_utils-Bz4m9VPB.js",
+      "_input-BAbo1PnM.js",
+      "_label-CGQJOB1N.js",
+      "_select-B0KGSWrx.js",
+      "_createLucideIcon-QBZlNJG1.js"
+    ]
+  },
+  "src/routes/cadastro.tsx?tsr-split=component": {
+    "file": "assets/cadastro-Bi8dS-ZF.js",
+    "name": "cadastro",
+    "src": "src/routes/cadastro.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-BXgX27qI.js",
+      "_router-X-RD508Q.js",
+      "_button-D6pPiZoM.js",
+      "_input-BAbo1PnM.js",
+      "_label-CGQJOB1N.js",
+      "_utils-Bz4m9VPB.js"
+    ]
+  },
+  "src/routes/index.tsx?tsr-split=component": {
+    "file": "assets/index-CVrR0vyA.js",
+    "name": "index",
+    "src": "src/routes/index.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-BXgX27qI.js",
+      "_router-X-RD508Q.js",
+      "_button-D6pPiZoM.js",
+      "_users-B_h33y_A.js",
+      "_createLucideIcon-QBZlNJG1.js",
+      "_utils-Bz4m9VPB.js"
+    ]
+  },
+  "src/routes/login.tsx?tsr-split=component": {
+    "file": "assets/login-DVKTlG1P.js",
+    "name": "login",
+    "src": "src/routes/login.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-BXgX27qI.js",
+      "_router-X-RD508Q.js",
+      "_button-D6pPiZoM.js",
+      "_input-BAbo1PnM.js",
+      "_label-CGQJOB1N.js",
+      "_utils-Bz4m9VPB.js"
+    ]
+  },
+  "src/start.ts": {
+    "file": "assets/start-BZjA2avx.js",
+    "name": "start",
+    "src": "src/start.ts",
+    "isDynamicEntry": true,
+    "imports": [
+      "_worker-entry-DPV_7oln.js"
+    ]
+  },
+  "tanstack-start-manifest:v": {
+    "file": "assets/_tanstack-start-manifest_v-CCFPf7AG.js",
+    "name": "_tanstack-start-manifest_v",
+    "src": "tanstack-start-manifest:v",
+    "isDynamicEntry": true
+  },
+  "virtual:cloudflare/worker-entry": {
+    "file": "index.js",
+    "name": "index",
+    "src": "virtual:cloudflare/worker-entry",
+    "isEntry": true,
+    "imports": [
+      "_worker-entry-DPV_7oln.js"
+    ]
+  }
+}

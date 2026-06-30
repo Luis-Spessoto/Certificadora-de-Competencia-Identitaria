@@ -1,0 +1,32 @@
+import { c as createLucideIcon } from "./createLucideIcon-QBZlNJG1.js";
+const __iconNode$1 = [
+  ["rect", { width: "8", height: "4", x: "8", y: "2", rx: "1", ry: "1", key: "tgr4d6" }],
+  [
+    "path",
+    {
+      d: "M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2",
+      key: "116196"
+    }
+  ],
+  ["path", { d: "m9 14 2 2 4-4", key: "df797q" }]
+];
+const ClipboardCheck = createLucideIcon("clipboard-check", __iconNode$1);
+const __iconNode = [
+  ["path", { d: "M14 21v-3a2 2 0 0 0-4 0v3", key: "1rgiei" }],
+  ["path", { d: "M18 5v16", key: "1ethyx" }],
+  ["path", { d: "m4 6 7.106-3.79a2 2 0 0 1 1.788 0L20 6", key: "zywc2d" }],
+  [
+    "path",
+    {
+      d: "m6 11-3.52 2.147a1 1 0 0 0-.48.854V19a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a1 1 0 0 0-.48-.853L18 11",
+      key: "1d4ql0"
+    }
+  ],
+  ["path", { d: "M6 5v16", key: "1sn0nx" }],
+  ["circle", { cx: "12", cy: "9", r: "2", key: "1092wv" }]
+];
+const School = createLucideIcon("school", __iconNode);
+export {
+  ClipboardCheck as C,
+  School as S
+};
