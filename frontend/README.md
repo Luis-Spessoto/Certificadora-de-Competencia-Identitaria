@@ -2,7 +2,7 @@
 
 <div align="center">
  <figure>
-  <img src="readME_image/prototipoFigma.png" alt="Protótipo Figma">
+  <img src="prototipoFigma.png" alt="Protótipo Figma">
   <figcaption>Protótipo do website feito com o Figma</figcaption>
  </figure>
 </div>
