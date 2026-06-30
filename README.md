@@ -38,15 +38,6 @@ O sistema permite que os responsáveis pelo projeto realizem o acompanhamento da
 
 
 # Tecnologias utilizadas
-
-* Front-end: React com typescript
-* Backend: Node.js com express, utilizando MongoDB como Banco de Dados.
-
-
-# Divisão do grupo para o desenvolvimento
-
-# Tecnologias utilizadas
-
 ## Front-end
 - TypeScript
 - React
