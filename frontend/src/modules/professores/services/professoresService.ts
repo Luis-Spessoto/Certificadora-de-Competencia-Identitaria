@@ -40,4 +40,17 @@ export const professoresService = {
     };
   },
   remove: (id: string) => apiRequest<void>(`/professores/${id}`, { method: "DELETE" }),
+  oficinas: async (id: string) => {
+    // Tenta buscar as oficinas populadas diretamente do professor primeiro
+    try {
+      const res = await apiRequest<any>(`/professores/${id}`);
+      if (res.oficinas) return res.oficinas;
+    } catch (e) {
+      console.error("Erro ao buscar oficinas do professor, tentando listagem geral", e);
+    }
+    
+    // Fallback para listagem geral filtrada
+    const res = await apiRequest<any[]>("/oficinas");
+    return res.filter((o) => (o.professorId?._id || o.professorId) === id);
+  },
 };

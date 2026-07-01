@@ -1,4 +1,5 @@
 const Professor = require("../models/Professor");
+const Oficina = require("../models/Oficina");
 const asyncHandler = require("../utils/asyncHandler");
 
 exports.createProfessor = asyncHandler(async (req, res, next) => {
@@ -12,14 +13,23 @@ exports.getProfessores = asyncHandler(async (req, res, next) => {
 });
 
 exports.getProfessor = asyncHandler(async (req, res, next) => {
-  const professor = await Professor.findById(req.params.id);
+  const professor = await Professor.findById(req.params.id).lean();
   if (!professor) {
     return res.status(404).json({
       success: false,
       error: `Professor não encontrado com o id: ${req.params.id}`
     });
   }
-  res.status(200).json(professor);
+
+  // Buscar oficinas vinculadas a este professor
+  const oficinas = await Oficina.find({ professorId: professor._id })
+    .populate("temaId")
+    .populate("tutorId");
+
+  res.status(200).json({
+    ...professor,
+    oficinas
+  });
 });
 
 exports.updateProfessor = asyncHandler(async (req, res, next) => {

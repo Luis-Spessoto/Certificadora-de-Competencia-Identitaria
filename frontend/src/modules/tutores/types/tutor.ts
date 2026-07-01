@@ -1,4 +1,4 @@
-export type TutorRole = "admin" | "tutor";
+export type TutorRole = "admin" | "tutor" | "professor";
 export type TutorStatus = "pendente" | "ativo" | "inativo";
 
 export interface Tutor {

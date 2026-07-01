@@ -18,11 +18,16 @@ import { Route as AuthenticatedDashboardRouteImport } from './routes/_authentica
 import { Route as AuthenticatedAprovacoesRouteImport } from './routes/_authenticated/aprovacoes'
 import { Route as AuthenticatedTutoresIndexRouteImport } from './routes/_authenticated/tutores.index'
 import { Route as AuthenticatedTurmasIndexRouteImport } from './routes/_authenticated/turmas.index'
+import { Route as AuthenticatedProfessoresIndexRouteImport } from './routes/_authenticated/professores.index'
 import { Route as AuthenticatedAlunosIndexRouteImport } from './routes/_authenticated/alunos.index'
 import { Route as AuthenticatedTutoresNovoRouteImport } from './routes/_authenticated/tutores.novo'
 import { Route as AuthenticatedTutoresIdRouteImport } from './routes/_authenticated/tutores.$id'
 import { Route as AuthenticatedTurmasNovaRouteImport } from './routes/_authenticated/turmas.nova'
 import { Route as AuthenticatedTurmasIdRouteImport } from './routes/_authenticated/turmas.$id'
+import { Route as AuthenticatedProfessoresSugerirTemaRouteImport } from './routes/_authenticated/professores.sugerir-tema'
+import { Route as AuthenticatedProfessoresNovoRouteImport } from './routes/_authenticated/professores.novo'
+import { Route as AuthenticatedProfessoresAgendarOficinaRouteImport } from './routes/_authenticated/professores.agendar-oficina'
+import { Route as AuthenticatedProfessoresIdRouteImport } from './routes/_authenticated/professores.$id'
 import { Route as AuthenticatedAlunosNovoRouteImport } from './routes/_authenticated/alunos.novo'
 import { Route as AuthenticatedAlunosIdRouteImport } from './routes/_authenticated/alunos.$id'
 
@@ -72,6 +77,12 @@ const AuthenticatedTurmasIndexRoute =
     path: '/turmas/',
     getParentRoute: () => AuthenticatedRoute,
   } as any)
+const AuthenticatedProfessoresIndexRoute =
+  AuthenticatedProfessoresIndexRouteImport.update({
+    id: '/professores/',
+    path: '/professores/',
+    getParentRoute: () => AuthenticatedRoute,
+  } as any)
 const AuthenticatedAlunosIndexRoute =
   AuthenticatedAlunosIndexRouteImport.update({
     id: '/alunos/',
@@ -99,6 +110,30 @@ const AuthenticatedTurmasIdRoute = AuthenticatedTurmasIdRouteImport.update({
   path: '/turmas/$id',
   getParentRoute: () => AuthenticatedRoute,
 } as any)
+const AuthenticatedProfessoresSugerirTemaRoute =
+  AuthenticatedProfessoresSugerirTemaRouteImport.update({
+    id: '/professores/sugerir-tema',
+    path: '/professores/sugerir-tema',
+    getParentRoute: () => AuthenticatedRoute,
+  } as any)
+const AuthenticatedProfessoresNovoRoute =
+  AuthenticatedProfessoresNovoRouteImport.update({
+    id: '/professores/novo',
+    path: '/professores/novo',
+    getParentRoute: () => AuthenticatedRoute,
+  } as any)
+const AuthenticatedProfessoresAgendarOficinaRoute =
+  AuthenticatedProfessoresAgendarOficinaRouteImport.update({
+    id: '/professores/agendar-oficina',
+    path: '/professores/agendar-oficina',
+    getParentRoute: () => AuthenticatedRoute,
+  } as any)
+const AuthenticatedProfessoresIdRoute =
+  AuthenticatedProfessoresIdRouteImport.update({
+    id: '/professores/$id',
+    path: '/professores/$id',
+    getParentRoute: () => AuthenticatedRoute,
+  } as any)
 const AuthenticatedAlunosNovoRoute = AuthenticatedAlunosNovoRouteImport.update({
   id: '/alunos/novo',
   path: '/alunos/novo',
@@ -119,11 +154,16 @@ export interface FileRoutesByFullPath {
   '/meu-perfil': typeof AuthenticatedMeuPerfilRoute
   '/alunos/$id': typeof AuthenticatedAlunosIdRoute
   '/alunos/novo': typeof AuthenticatedAlunosNovoRoute
+  '/professores/$id': typeof AuthenticatedProfessoresIdRoute
+  '/professores/agendar-oficina': typeof AuthenticatedProfessoresAgendarOficinaRoute
+  '/professores/novo': typeof AuthenticatedProfessoresNovoRoute
+  '/professores/sugerir-tema': typeof AuthenticatedProfessoresSugerirTemaRoute
   '/turmas/$id': typeof AuthenticatedTurmasIdRoute
   '/turmas/nova': typeof AuthenticatedTurmasNovaRoute
   '/tutores/$id': typeof AuthenticatedTutoresIdRoute
   '/tutores/novo': typeof AuthenticatedTutoresNovoRoute
   '/alunos/': typeof AuthenticatedAlunosIndexRoute
+  '/professores/': typeof AuthenticatedProfessoresIndexRoute
   '/turmas/': typeof AuthenticatedTurmasIndexRoute
   '/tutores/': typeof AuthenticatedTutoresIndexRoute
 }
@@ -136,11 +176,16 @@ export interface FileRoutesByTo {
   '/meu-perfil': typeof AuthenticatedMeuPerfilRoute
   '/alunos/$id': typeof AuthenticatedAlunosIdRoute
   '/alunos/novo': typeof AuthenticatedAlunosNovoRoute
+  '/professores/$id': typeof AuthenticatedProfessoresIdRoute
+  '/professores/agendar-oficina': typeof AuthenticatedProfessoresAgendarOficinaRoute
+  '/professores/novo': typeof AuthenticatedProfessoresNovoRoute
+  '/professores/sugerir-tema': typeof AuthenticatedProfessoresSugerirTemaRoute
   '/turmas/$id': typeof AuthenticatedTurmasIdRoute
   '/turmas/nova': typeof AuthenticatedTurmasNovaRoute
   '/tutores/$id': typeof AuthenticatedTutoresIdRoute
   '/tutores/novo': typeof AuthenticatedTutoresNovoRoute
   '/alunos': typeof AuthenticatedAlunosIndexRoute
+  '/professores': typeof AuthenticatedProfessoresIndexRoute
   '/turmas': typeof AuthenticatedTurmasIndexRoute
   '/tutores': typeof AuthenticatedTutoresIndexRoute
 }
@@ -155,11 +200,16 @@ export interface FileRoutesById {
   '/_authenticated/meu-perfil': typeof AuthenticatedMeuPerfilRoute
   '/_authenticated/alunos/$id': typeof AuthenticatedAlunosIdRoute
   '/_authenticated/alunos/novo': typeof AuthenticatedAlunosNovoRoute
+  '/_authenticated/professores/$id': typeof AuthenticatedProfessoresIdRoute
+  '/_authenticated/professores/agendar-oficina': typeof AuthenticatedProfessoresAgendarOficinaRoute
+  '/_authenticated/professores/novo': typeof AuthenticatedProfessoresNovoRoute
+  '/_authenticated/professores/sugerir-tema': typeof AuthenticatedProfessoresSugerirTemaRoute
   '/_authenticated/turmas/$id': typeof AuthenticatedTurmasIdRoute
   '/_authenticated/turmas/nova': typeof AuthenticatedTurmasNovaRoute
   '/_authenticated/tutores/$id': typeof AuthenticatedTutoresIdRoute
   '/_authenticated/tutores/novo': typeof AuthenticatedTutoresNovoRoute
   '/_authenticated/alunos/': typeof AuthenticatedAlunosIndexRoute
+  '/_authenticated/professores/': typeof AuthenticatedProfessoresIndexRoute
   '/_authenticated/turmas/': typeof AuthenticatedTurmasIndexRoute
   '/_authenticated/tutores/': typeof AuthenticatedTutoresIndexRoute
 }
@@ -174,11 +224,16 @@ export interface FileRouteTypes {
     | '/meu-perfil'
     | '/alunos/$id'
     | '/alunos/novo'
+    | '/professores/$id'
+    | '/professores/agendar-oficina'
+    | '/professores/novo'
+    | '/professores/sugerir-tema'
     | '/turmas/$id'
     | '/turmas/nova'
     | '/tutores/$id'
     | '/tutores/novo'
     | '/alunos/'
+    | '/professores/'
     | '/turmas/'
     | '/tutores/'
   fileRoutesByTo: FileRoutesByTo
@@ -191,11 +246,16 @@ export interface FileRouteTypes {
     | '/meu-perfil'
     | '/alunos/$id'
     | '/alunos/novo'
+    | '/professores/$id'
+    | '/professores/agendar-oficina'
+    | '/professores/novo'
+    | '/professores/sugerir-tema'
     | '/turmas/$id'
     | '/turmas/nova'
     | '/tutores/$id'
     | '/tutores/novo'
     | '/alunos'
+    | '/professores'
     | '/turmas'
     | '/tutores'
   id:
@@ -209,11 +269,16 @@ export interface FileRouteTypes {
     | '/_authenticated/meu-perfil'
     | '/_authenticated/alunos/$id'
     | '/_authenticated/alunos/novo'
+    | '/_authenticated/professores/$id'
+    | '/_authenticated/professores/agendar-oficina'
+    | '/_authenticated/professores/novo'
+    | '/_authenticated/professores/sugerir-tema'
     | '/_authenticated/turmas/$id'
     | '/_authenticated/turmas/nova'
     | '/_authenticated/tutores/$id'
     | '/_authenticated/tutores/novo'
     | '/_authenticated/alunos/'
+    | '/_authenticated/professores/'
     | '/_authenticated/turmas/'
     | '/_authenticated/tutores/'
   fileRoutesById: FileRoutesById
@@ -290,6 +355,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedTurmasIndexRouteImport
       parentRoute: typeof AuthenticatedRoute
     }
+    '/_authenticated/professores/': {
+      id: '/_authenticated/professores/'
+      path: '/professores'
+      fullPath: '/professores/'
+      preLoaderRoute: typeof AuthenticatedProfessoresIndexRouteImport
+      parentRoute: typeof AuthenticatedRoute
+    }
     '/_authenticated/alunos/': {
       id: '/_authenticated/alunos/'
       path: '/alunos'
@@ -325,6 +397,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedTurmasIdRouteImport
       parentRoute: typeof AuthenticatedRoute
     }
+    '/_authenticated/professores/sugerir-tema': {
+      id: '/_authenticated/professores/sugerir-tema'
+      path: '/professores/sugerir-tema'
+      fullPath: '/professores/sugerir-tema'
+      preLoaderRoute: typeof AuthenticatedProfessoresSugerirTemaRouteImport
+      parentRoute: typeof AuthenticatedRoute
+    }
+    '/_authenticated/professores/novo': {
+      id: '/_authenticated/professores/novo'
+      path: '/professores/novo'
+      fullPath: '/professores/novo'
+      preLoaderRoute: typeof AuthenticatedProfessoresNovoRouteImport
+      parentRoute: typeof AuthenticatedRoute
+    }
+    '/_authenticated/professores/agendar-oficina': {
+      id: '/_authenticated/professores/agendar-oficina'
+      path: '/professores/agendar-oficina'
+      fullPath: '/professores/agendar-oficina'
+      preLoaderRoute: typeof AuthenticatedProfessoresAgendarOficinaRouteImport
+      parentRoute: typeof AuthenticatedRoute
+    }
+    '/_authenticated/professores/$id': {
+      id: '/_authenticated/professores/$id'
+      path: '/professores/$id'
+      fullPath: '/professores/$id'
+      preLoaderRoute: typeof AuthenticatedProfessoresIdRouteImport
+      parentRoute: typeof AuthenticatedRoute
+    }
     '/_authenticated/alunos/novo': {
       id: '/_authenticated/alunos/novo'
       path: '/alunos/novo'
@@ -348,11 +448,16 @@ interface AuthenticatedRouteChildren {
   AuthenticatedMeuPerfilRoute: typeof AuthenticatedMeuPerfilRoute
   AuthenticatedAlunosIdRoute: typeof AuthenticatedAlunosIdRoute
   AuthenticatedAlunosNovoRoute: typeof AuthenticatedAlunosNovoRoute
+  AuthenticatedProfessoresIdRoute: typeof AuthenticatedProfessoresIdRoute
+  AuthenticatedProfessoresAgendarOficinaRoute: typeof AuthenticatedProfessoresAgendarOficinaRoute
+  AuthenticatedProfessoresNovoRoute: typeof AuthenticatedProfessoresNovoRoute
+  AuthenticatedProfessoresSugerirTemaRoute: typeof AuthenticatedProfessoresSugerirTemaRoute
   AuthenticatedTurmasIdRoute: typeof AuthenticatedTurmasIdRoute
   AuthenticatedTurmasNovaRoute: typeof AuthenticatedTurmasNovaRoute
   AuthenticatedTutoresIdRoute: typeof AuthenticatedTutoresIdRoute
   AuthenticatedTutoresNovoRoute: typeof AuthenticatedTutoresNovoRoute
   AuthenticatedAlunosIndexRoute: typeof AuthenticatedAlunosIndexRoute
+  AuthenticatedProfessoresIndexRoute: typeof AuthenticatedProfessoresIndexRoute
   AuthenticatedTurmasIndexRoute: typeof AuthenticatedTurmasIndexRoute
   AuthenticatedTutoresIndexRoute: typeof AuthenticatedTutoresIndexRoute
 }
@@ -363,11 +468,18 @@ const AuthenticatedRouteChildren: AuthenticatedRouteChildren = {
   AuthenticatedMeuPerfilRoute: AuthenticatedMeuPerfilRoute,
   AuthenticatedAlunosIdRoute: AuthenticatedAlunosIdRoute,
   AuthenticatedAlunosNovoRoute: AuthenticatedAlunosNovoRoute,
+  AuthenticatedProfessoresIdRoute: AuthenticatedProfessoresIdRoute,
+  AuthenticatedProfessoresAgendarOficinaRoute:
+    AuthenticatedProfessoresAgendarOficinaRoute,
+  AuthenticatedProfessoresNovoRoute: AuthenticatedProfessoresNovoRoute,
+  AuthenticatedProfessoresSugerirTemaRoute:
+    AuthenticatedProfessoresSugerirTemaRoute,
   AuthenticatedTurmasIdRoute: AuthenticatedTurmasIdRoute,
   AuthenticatedTurmasNovaRoute: AuthenticatedTurmasNovaRoute,
   AuthenticatedTutoresIdRoute: AuthenticatedTutoresIdRoute,
   AuthenticatedTutoresNovoRoute: AuthenticatedTutoresNovoRoute,
   AuthenticatedAlunosIndexRoute: AuthenticatedAlunosIndexRoute,
+  AuthenticatedProfessoresIndexRoute: AuthenticatedProfessoresIndexRoute,
   AuthenticatedTurmasIndexRoute: AuthenticatedTurmasIndexRoute,
   AuthenticatedTutoresIndexRoute: AuthenticatedTutoresIndexRoute,
 }

@@ -15,4 +15,12 @@ export const oficinasService = {
       local: o.local || "",
     }));
   },
+  create: async (data: Omit<Oficina, "id">) => {
+    const res = await apiRequest<any>("/oficinas", { method: "POST", body: data });
+    return {
+      id: res._id || res.id,
+      ...data,
+    };
+  },
+  remove: (id: string) => apiRequest<void>(`/oficinas/${id}`, { method: "DELETE" }),
 };
