@@ -7,14 +7,12 @@ const asyncHandler = require("../utils/asyncHandler");
 const seedAdmin = async () => {
   const adminExists = await Tutor.findOne({ email: "admin@ellp.utfpr.edu.br" });
   if (!adminExists) {
-    const saltAdmin = await bcrypt.genSalt(10);
-    const hashAdmin = await bcrypt.hash("admin123", saltAdmin);
     await Tutor.create({
       nome: "Coordenador ELLP",
       email: "admin@ellp.utfpr.edu.br",
       curso: "Coordenação",
       periodo: "1º período",
-      senha: hashAdmin,
+      senha: "admin123",
       role: "admin",
       status: "ativo"
     });
@@ -22,14 +20,12 @@ const seedAdmin = async () => {
 
   const tutorExists = await Tutor.findOne({ email: "tutor@ellp.utfpr.edu.br" });
   if (!tutorExists) {
-    const saltTutor = await bcrypt.genSalt(10);
-    const hashTutor = await bcrypt.hash("tutor123", saltTutor);
     await Tutor.create({
       nome: "João Vitor Furquim",
       email: "tutor@ellp.utfpr.edu.br",
       curso: "Análise e Desenvolvimento de Sistemas",
       periodo: "1º período",
-      senha: hashTutor,
+      senha: "tutor123",
       role: "tutor",
       status: "ativo"
     });
@@ -37,12 +33,10 @@ const seedAdmin = async () => {
 
   const profExists = await Professor.findOne({ email: "professor@ellp.utfpr.edu.br" });
   if (!profExists) {
-    const saltProf = await bcrypt.genSalt(10);
-    const hashProf = await bcrypt.hash("prof123", saltProf);
     await Professor.create({
       nome: "Prof. Orientador ELLP",
       email: "professor@ellp.utfpr.edu.br",
-      senha: hashProf
+      senha: "prof123"
     });
   }
 };

@@ -96,23 +96,6 @@ Uma documentação interativa e detalhada está disponível localmente através 
   * *Campos*: `email` (String), `senha` (String).
 * `GET /me` - Retorna os dados do usuário autenticado (requer cabeçalho `Authorization: Bearer <token>`).
 
-## Diferença entre Rotas Administrativas (CRUD) e Autenticação (Auth)
-
-O sistema separa as rotas em dois escopos principais para garantir segurança e organização do projeto:
-
-### 1. Rotas Administrativas/CRUD (`/api/professores` e `/api/tutores`)
-* **Objetivo**: Gerenciamento de cadastros por parte dos **Administradores (Coordenadores)**.
-* **Uso**: Permite que a coordenação liste todos os cadastros, atualize dados de terceiros ou remova tutores/professores desligados do projeto.
-* **Segurança**: São rotas privadas e controladas que exigem permissões de administrador. Um usuário comum (como um tutor) não deve ter acesso a listar ou alterar dados de outros profissionais.
-
-### 2. Rotas de Autenticação/Auth (`/api/auth/*`)
-* **Objetivo**: Ações individuais e públicas (auto-cadastro e login).
-* **Uso**:
-  * `/api/auth/register`: É uma rota pública que permite que um novo monitor se auto-cadastre no sistema (iniciando com status `pendente` até que a coordenação o aprove através da rota administrativa).
-  * `/api/auth/login`: Autentica credenciais fornecidas e emite o token de acesso (JWT) para as sessões dos Tutores, Coordenadores e Professores.
-  * `/api/auth/me`: Permite que o usuário conectado recupere seus próprios dados de sessão de forma segura.
-
-### Por que ter ambas?
-Essa separação é fundamental por motivos de **Segurança (Controle de Acessos)** e **Responsabilidade (Separação de Conceitos)**:
+)** e **Responsabilidade (Separação de Conceitos)**:
 * Se usássemos apenas a rota de cadastro administrativo para criar usuários, os tutores não conseguiriam se auto-cadastrar na plataforma.
 * Se usássemos apenas a rota de auto-cadastro pública, a coordenação perderia a capacidade de gerenciar, listar, alterar dados ou inativar contas da equipe de forma centralizada.
