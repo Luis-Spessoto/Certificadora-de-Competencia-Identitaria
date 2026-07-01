@@ -31,7 +31,7 @@ const TutorSchema = new mongoose.Schema({
   },
   role: {
     type: String,
-    enum: ["admin", "tutor"],
+    enum: ["admin", "tutor", "professor"],
     default: "tutor"
   },
   status: {

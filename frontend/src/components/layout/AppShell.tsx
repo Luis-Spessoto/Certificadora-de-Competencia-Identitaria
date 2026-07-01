@@ -17,6 +17,7 @@ const items: NavItem[] = [
   { to: "/aprovacoes", label: "Aprovações", icon: ClipboardCheck, adminOnly: true },
   { to: "/alunos", label: "Alunos", icon: School },
   { to: "/turmas", label: "Turmas", icon: BookOpen },
+  { to: "/professores", label: "Professores", icon: Users, adminOnly: true },
   { to: "/meu-perfil", label: "Meu perfil", icon: UserCog },
 ];
 

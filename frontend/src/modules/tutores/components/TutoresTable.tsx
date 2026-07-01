@@ -28,6 +28,7 @@ export function TutoresTable({ tutores, onToggleStatus }: Props) {
           <TableHead>Curso</TableHead>
           <TableHead>Papel</TableHead>
           <TableHead>Status</TableHead>
+          <TableHead>Oficinas</TableHead>
           <TableHead className="text-right">Ações</TableHead>
         </TableRow>
       </TableHeader>
@@ -39,6 +40,9 @@ export function TutoresTable({ tutores, onToggleStatus }: Props) {
             <TableCell>{t.curso}</TableCell>
             <TableCell className="capitalize">{t.role}</TableCell>
             <TableCell><Badge variant={statusVariant[t.status]}>{t.status}</Badge></TableCell>
+            <TableCell>
+              <Badge variant="outline">{(t as any).totalOficinas || 0}</Badge>
+            </TableCell>
             <TableCell className="text-right space-x-2">
               <Button asChild size="sm" variant="outline">
                 <Link to="/tutores/$id" params={{ id: t.id }}>Editar</Link>

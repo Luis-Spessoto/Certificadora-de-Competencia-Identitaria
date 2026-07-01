@@ -59,7 +59,8 @@ export const tutoresService = {
   },
   remove: (id: string) => apiRequest<void>(`/tutores/${id}`, { method: "DELETE" }),
   oficinas: async (id: string) => {
+    // Busca todas as oficinas e filtra pelo tutorId, garantindo que pegamos as mais recentes
     const res = await apiRequest<any[]>("/oficinas");
-    return res.filter((o) => o.tutorId === id);
+    return res.filter((o) => (o.tutorId?._id || o.tutorId) === id);
   },
 };

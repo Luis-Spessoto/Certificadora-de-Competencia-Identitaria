@@ -23,9 +23,22 @@ export function TutorOficinasCard({ tutorId }: { tutorId: string }) {
         {data && data.length > 0 && (
           <ul className="space-y-2">
             {data.map((o) => (
-              <li key={o.id} className="rounded-md border border-border p-3">
-                <div className="font-medium text-sm">{o.nome || o.titulo}</div>
-                {o.descricao && <div className="text-xs text-muted-foreground">{o.descricao}</div>}
+              <li key={o.id} className="rounded-md border border-border p-3 space-y-1">
+                <div className="flex items-center justify-between">
+                  <div className="font-medium text-sm">{o.nome || o.titulo}</div>
+                  <div className="text-[10px] font-medium bg-secondary text-secondary-foreground px-1.5 py-0.5 rounded uppercase">
+                    {o.data || "Sem data"}
+                  </div>
+                </div>
+                <div className="text-xs text-muted-foreground">
+                  {o.horario && <span>🕒 {o.horario}</span>}
+                  {o.local && <span className="ml-3">📍 {o.local}</span>}
+                </div>
+                {o.professorId && (
+                  <div className="text-xs font-medium text-primary pt-1 border-t border-border/50 mt-1">
+                    Professor: {o.professorId.nome || "Vinculado"}
+                  </div>
+                )}
               </li>
             ))}
           </ul>
