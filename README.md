@@ -35,18 +35,18 @@ O sistema para gestão de oficinas do ELLP é uma plataforma Fullstack desenvolv
 
 # Tecnologias utilizadas
 
-## Front-end
+### Front-end
 - TypeScript
 - React
 - HTML5
 - CSS3
 
-## Back-end
+### Back-end
 - Node.js
 - Express
 - MongoDB (Mongoose)
 
-## Ferramentas utilizadas
+### Ferramentas utilizadas
 - Visual Studio Code
 - GitHub
 - Figma
@@ -57,30 +57,30 @@ O sistema para gestão de oficinas do ELLP é uma plataforma Fullstack desenvolv
 - **João**: Responsável pelo Módulo de Professores e Tutores
 - **Danilo**: Responsável pelo Módulo de Temas e Curadoria de Oficinas
 - **Pedro**: Responsável pelo Módulo de Alunos e Enturmação
-- **Bruno**: Responsável pelo Banco de Dados e Integração
+- **Bruno**: Responsável pelo Backend e Integração
 
 # Funcionalidades Desenvolvidas
 
-## Gestão de Usuários
+### Gestão de Usuários
 - Cadastro e gerenciamento de usuários do sistema
 - Controle de acesso conforme perfil
 
-## Gestão de Professores e Tutores
+### Gestão de Professores e Tutores
 - Cadastro de professores
 - Cadastro de tutores
 - Visualização e gerenciamento das informações
 
-## Gestão de Alunos
+### Gestão de Alunos
 - Cadastro de alunos
 - Organização de alunos em turmas
 - Controle de participantes das oficinas
 
-## Gestão de Oficinas
+### Gestão de Oficinas
 - Cadastro de oficinas
 - Organização dos temas trabalhados
 - Curadoria das atividades disponíveis
 
-## Gestão de Turmas
+### Gestão de Turmas
 - Criação e gerenciamento de turmas
 - Associação de alunos e tutores
 
@@ -90,14 +90,55 @@ __________________________________________
 
 O projeto é dividido em dois diretórios principais:
 
-- `/frontend`: Interface web construída com React e TypeScript.
-- `/backend`: API RESTful desenvolvida com Node.js, Express, Mongoose e MongoDB, estruturada seguindo o padrão **MVC (Model-View-Controller)**:
-  - `src/config/`: Configurações de conexões externas (Banco de Dados).
-  - `src/models/`: Definições dos schemas das entidades Mongoose e seus relacionamentos.
-  - `src/controllers/`: Lógica de negócio das rotas da API.
-  - `src/routes/`: Definição das rotas Express e redirecionamento aos controllers.
-  - `src/middlewares/`: Middlewares globais (como tratamento de erros centralizado).
-  - `src/utils/`: Utilitários gerais (como wrapper assíncrono para rotas).
+### 📁 `/frontend`
+Interface web moderna desenvolvida com React, TypeScript, Vite e estilizada com componentes customizados baseados em shadcn/ui.
+
+* **`src/components/`**: Componentes reutilizáveis da interface de usuário.
+    * `layout/`: Layouts estruturais da aplicação (como o `AppShell.tsx`).
+    * `ui/`: Componentes básicos de design system (botões, modais, tabelas, inputs, etc., configurados com Tailwind CSS).
+* **`src/contexts/`**: Provedores de estado global do React.
+    * `AuthContext.tsx`: Contexto global para controle e persistência de autenticação do usuário.
+* **`src/hooks/`**: Hooks customizados do React (como `use-mobile.tsx` para detecção de dispositivos móveis).
+* **`src/lib/`**: Configurações de bibliotecas externas e utilitários helpers (ex: `utils.ts` e helpers de captura de erros).
+* **`src/modules/`**: Módulos de negócio divididos por domínio (cada um contendo seus próprios componentes internos, serviços e tipagens):
+    * `alunos/`
+    * `professores/`
+    * `temas/`
+    * `tutores/`
+* **`src/routes/`**: Gerenciamento de rotas com roteamento baseado em arquivos utilizando TanStack Router.
+    * `_authenticated/`: Subgrupo de rotas protegidas que necessitam de login ativo (como dashboards, perfil e listagens de entidades).
+    * `index.tsx`, `login.tsx`, `cadastro.tsx` e `__root.tsx` (a rota raiz que encapsula a estrutura global).
+* **`src/services/`**: Camada de comunicação de rede e chamadas de API (como `apiClient.ts` e `authService.ts`).
+* **`src/styles.css`**: Estilos globais e tokens de design CSS da aplicação.
+
+---
+
+### 📁 `/backend`
+API RESTful robusta desenvolvida com Node.js, Express, Mongoose e MongoDB, estruturada seguindo o padrão MVC (Model-View-Controller):
+
+* **`src/config/`**: Configurações de conexões externas.
+    * `db.js`: Inicialização e conexão com o banco de dados MongoDB.
+* **`src/models/`**: Definições dos schemas das entidades Mongoose e seus relacionamentos:
+    * `Aluno.js`: Representação da entidade Aluno.
+    * `Oficina.js`: Representação da entidade Oficina.
+    * `Professor.js`: Representação da entidade Professor.
+    * `Tema.js`: Representação da entidade Tema.
+    * `Turma.js`: Representação da entidade Turma.
+    * `Tutor.js`: Representação da entidade Tutor.
+* **`src/controllers/`**: Lógica de negócio das rotas da API:
+    * `alunoController.js`, `authController.js`, `oficinaController.js`, `professorController.js`, `temaController.js`, `turmaController.js`, `tutorController.js`.
+* **`src/routes/`**: Definição de endpoints Express e o mapeamento das requisições para seus respectivos controladores:
+    * Rotas individuais correspondentes a cada módulo do sistema unificadas no arquivo centralizador `index.js`.
+* **`src/middlewares/`**: Funções intermediárias que atuam no pipeline de requisições:
+    * `authMiddleware.js`: Interceptação e validação de tokens JWT para rotas privadas.
+    * `errorHandler.js`: Middleware de tratamento centralizado de erros e exceções da API.
+* **`src/utils/`**: Utilitários gerais de suporte para a API:
+    * `asyncHandler.js`: Wrapper assíncrono para rotas do Express para simplificar o tratamento de erros sem blocos try-catch manuais repetitivos.
+* **`src/docs/`**: Estruturação da documentação da API baseada em OpenAPI/Swagger:
+    * `swaggerConfig.js`: Configuração geral do Swagger UI.
+    * Subdiretórios `paths/`, `responses/`, `schemas/` e `tags/` para modularização da documentação dos endpoints.
+* **`src/app.js`**: Configura a instância principal da aplicação Express.
+* **`src/server.js`**: Script de entrada principal que inicializa o servidor HTTP e escuta a porta de rede.
 
 # Como Executar o Projeto
 
@@ -131,81 +172,9 @@ npm run dev:frontend
 
 *(Lembre-se de rodar estes comandos em terminais separados para manter ambos em execução ao mesmo tempo).*
 
-# Documentação da API
+# Documentação da API ( Swagger ) 
 
 A API possui documentação interativa, disponível localmente em dois formatos:
 
 - **Swagger**: inicie o back-end (`npm run dev:backend`) e acesse `http://localhost:3000/api-docs`.
-- **Rota de documentação detalhada**: `http://localhost:3000/docs`.
 
-## Resumo dos Endpoints
-
-### 1. Alunos (`/api/alunos`)
-- `GET /` - Retorna a lista de todos os alunos.
-- `GET /:id` - Retorna os dados de um aluno específico.
-- `POST /` - Cadastra um novo aluno. *Campos*: `nome` (String), `escola` (String), `idade` (Number).
-- `PUT /:id` - Atualiza dados de um aluno.
-- `DELETE /:id` - Remove um aluno.
-
-### 2. Professores (`/api/professores`)
-- `GET /` - Lista todos os professores orientadores.
-- `GET /:id` - Retorna dados de um professor específico.
-- `POST /` - Cadastra um novo professor. *Campos*: `nome` (String), `email` (String, único), `senha` (String).
-- `PUT /:id` - Atualiza dados de um professor.
-- `DELETE /:id` - Remove um professor.
-
-### 3. Tutores (`/api/tutores`)
-- `GET /` - Lista todos os tutores monitores.
-- `GET /:id` - Retorna dados de um tutor específico.
-- `POST /` - Cadastra um novo tutor. *Campos*: `nome` (String), `email` (String, único), `curso` (String), `periodo` (String), `senha` (String), `role` (String), `status` (String).
-- `PUT /:id` - Atualiza dados de um tutor.
-- `DELETE /:id` - Remove um tutor.
-
-### 4. Temas das Oficinas (`/api/temas`)
-- `GET /` - Lista todas as propostas de temas.
-- `GET /:id` - Retorna dados de um tema específico.
-- `POST /` - Cadastra um novo tema. *Campos*: `titulo` (String), `descricao` (String), `aprovado` (Boolean, opcional).
-- `PUT /:id` - Atualiza ou aprova um tema.
-- `DELETE /:id` - Exclui um tema.
-
-### 5. Oficinas Agendadas (`/api/oficinas`)
-- `GET /` - Lista todas as oficinas (popula os dados de Tema, Tutor e Professor).
-- `GET /:id` - Detalha uma oficina agendada pelo ID.
-- `POST /` - Agenda uma oficina. *Campos*: `nome` (String), `temaId` (ObjectId), `tutorId` (ObjectId), `professorId` (ObjectId), `data` (String), `horario` (String), `local` (String).
-- `PUT /:id` - Atualiza dados de agendamento de uma oficina.
-- `DELETE /:id` - Exclui uma oficina.
-
-### 6. Turmas (`/api/turmas`)
-- `GET /` - Retorna todas as turmas (com populações de Oficina e Alunos).
-- `GET /:id` - Retorna detalhes de uma turma.
-- `POST /` - Cria uma turma para uma oficina. *Campos*: `nome` (String), `oficinaId` (ObjectId), `alunos` (Array de ObjectIds).
-- `PUT /:id` - Atualiza dados da turma ou alunos matriculados.
-- `DELETE /:id` - Exclui uma turma.
-
-### 7. Autenticação (`/api/auth`)
-- `POST /register` - Cadastra um novo tutor monitor. *Campos*: `nome` (String), `email` (String), `curso` (String), `senha` (String).
-- `POST /login` - Autentica um usuário e retorna o token JWT. *Campos*: `email` (String), `senha` (String).
-- `GET /me` - Retorna os dados do usuário autenticado (requer cabeçalho `Authorization: Bearer <token>`).
-
-## Diferença entre Rotas Administrativas (CRUD) e Autenticação (Auth)
-
-O sistema separa as rotas em dois escopos principais para garantir segurança e organização do projeto:
-
-### 1. Rotas Administrativas/CRUD (`/api/professores` e `/api/tutores`)
-- **Objetivo**: Gerenciamento de cadastros por parte dos **Administradores (Coordenadores)**.
-- **Uso**: Permite que a coordenação liste todos os cadastros, atualize dados de terceiros ou remova tutores/professores desligados do projeto.
-- **Segurança**: São rotas privadas e controladas que exigem permissões de administrador. Um usuário comum (como um tutor) não deve ter acesso a listar ou alterar dados de outros profissionais.
-
-### 2. Rotas de Autenticação/Auth (`/api/auth/*`)
-- **Objetivo**: Ações individuais e públicas (auto-cadastro e login).
-- **Uso**:
-  - `/api/auth/register`: rota pública que permite que um novo monitor se auto-cadastre no sistema (iniciando com status pendente até que a coordenação o aprove através da rota administrativa).
-  - `/api/auth/login`: autentica credenciais fornecidas e emite o token de acesso (JWT) para as sessões de Tutores, Coordenadores e Professores.
-  - `/api/auth/me`: permite que o usuário conectado recupere seus próprios dados de sessão de forma segura.
-
-### Por que ter ambas?
-
-Essa separação é fundamental por motivos de **Segurança (Controle de Acessos)** e **Responsabilidade (Separação de Conceitos)**:
-
-- Se usássemos apenas a rota de cadastro administrativo para criar usuários, os tutores não conseguiriam se auto-cadastrar na plataforma.
-- Se usássemos apenas a rota de auto-cadastro pública, a coordenação perderia a capacidade de gerenciar, listar, alterar dados ou inativar contas da equipe de forma centralizada.
